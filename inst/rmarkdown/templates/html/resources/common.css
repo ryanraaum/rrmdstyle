@@ -1,118 +1,67 @@
 /*
 CSS for R Markdown
 Author: Ryan Raaum
-Updated: 2021-05-14
+Updated: 2021-11-17
 */
-
-/*~~~~~~~~~~~~~~~~~~~~*/
-/* Custom properties  */
-/*~~~~~~~~~~~~~~~~~~~~*/
-
-:root {
-  --dark-theme-color: #5D6477;
-  --light-theme-color: #B3C2D0;
-  --lighter-theme-color: #D9E0E7;
-  --bg-color: #F4F4F6;
-  --default-font-size: 1.25em;
-}
 
 /*~~~~~~~~~*/
 /* Global  */
 /*~~~~~~~~~*/
 
-body, body p {
-  font-size: var(--default-font-size);
-  line-height: 150%;
-}
-
-h1 {
-  font-size: 175%;
-  font-weight: bold;
-  margin-top: 50px;
-}
-
 h1.title {
-  font-size: 200%;
+  font-size: 1.55rem;
   font-weight: 400;
   text-align: center;
   margin-top: 10px;
 }
 
-h2 {
-  font-size: 140%;
-}
-
-h3 {
-  font-size: 120%;
-}
-
-h4 {
-  font-size: 110%;
-}
-
 h3.subtitle {
-  font-size: 125%;
+  font-size: 1rem;
   font-weight: normal;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 0.5rem;
 }
 
 h4.author {
-  font-size: 125%;
+  font-size: 1rem;
   font-weight: normal;
   text-align: center;
+  margin-top: 0.5rem;
 }
 
 h4.date {
-  font-size: 125%;
+  font-size: 1rem;
   font-weight: normal;
   text-align: center;
+  margin-top: 0.5rem;
 }
 
-p code {
-  font-size: 100%;
+h1 {
+  font-weight: bolder;
 }
 
-dt code {
-  font-size: 125%;
+h2 {
+  font-weight: bold;
+}
+
+h3 {
+  font-weight: bold;
 }
 
 pre {
-  font-size: 125%;
-  background-color: #F2F5F7;
+  background-color: var(--bs-light);
 }
-
-.bg-danger {
-  background-color: #FDEDED;
-}
-
-.bg-success {
-  background-color: #EEF7EE;
-}
-
-.bg-warn {
-  background-color: #FFFFD6;
-}
-
-.bg-info {
-  background-color: #EEF8FB;
-}
-
 
 .table {
+  font-size: 0.9rem;
   width: auto;
   margin-left: auto;
   margin-right: auto;
 }
 
 blockquote {
-  border-left: solid 5px var(--light-theme-color);
-  font-size: 115%;
-}
-
-ol li, ul li {
-  font-size: var(--default-font-size);
-	padding: 0.25rem 0 0.25rem 0.5rem;
+  border-left: solid 5px var(--bs-dark);
+  font-size: 1.15rem;
 }
 
 .rrlogo {
@@ -123,6 +72,8 @@ ol li, ul li {
 
 .tophr {
   border-top: 1px solid black;
+  opacity: 1;
   padding: 0;
   margin: 20px 0 0 0;
 }
+
