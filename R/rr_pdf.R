@@ -50,12 +50,15 @@ rr_pdf <- function(
   fig_height = 4.5,
   highlight = "default",
   template = "default",
+  df_print = "default",
   pandoc_args = NULL,
   ...
 ) {
   doctype <- match.arg(doctype)
 
   if (identical(highlight, "default")) highlight <- "pygments"
+
+  if (identical(df_print, "default")) df_print <- "tibble"
 
   if (identical(template, "default")) {
     template <- template_resources("pdf", "pdf_template.tex")
@@ -84,6 +87,7 @@ rr_pdf <- function(
     fig_height = fig_height,
     highlight = highlight,
     template = template,
+    df_print = df_print,
     pandoc_args = pandoc_args,
     ...
   )
