@@ -2,8 +2,23 @@ fig_aspect = 0.618
 fig_w = 6
 fig_h = fig_w * fig_aspect
 
+#' HTML format for literate, interactive R Markdown worksheets
+#'
+#' This format is for an HTML version of worksheets used in
+#' my Quantitative Methods in Biological Anthropology course.
+#'
+#' @param ...
+#' See other arguments in the documentation for [rmarkdown::html_document()]
+#' (note that you cannot use the \code{theme} argument because it is set
+#' internally).
+#' @name html_worksheet
+#' @rdname rr_html
+NULL
+
 #' @importFrom bslib bs_theme font_google
+#' @return An R Markdown output format.
 #' @export
+#' @rdname rr_html
 html_worksheet <- function(...) {
   wrapped_html_document <- function(..., theme = theme, extra_dependencies = list()) {
     rmarkdown::html_document(

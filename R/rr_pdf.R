@@ -9,10 +9,10 @@
 #' my Quantitative Methods in Biological Anthropology course.
 #'
 #' @inheritParams rmarkdown::pdf_document
-#' @param ...,fig_crop,dev,df_print,highlight,keep_tex,keep_md,latex_engine,citation_package,includes,md_extensions,output_extensions,pandoc_args,extra_dependencies
-#' Other arguments to be passed to [rmarkdown::pdf_document()]
-#' (note you cannot use the \code{template} argument in either
-#' \code{pdf_worksheet} or \code{pdf_assignment}; this argument is set
+#' @param ...
+#' See other arguments in the documentation for [rmarkdown::pdf_document()]
+#' (note that you cannot use the \code{template} argument in either
+#' \code{pdf_worksheet} or \code{pdf_assignment} becaues it is set
 #' internally).
 #' @section Details: You can find more details about each output format below.
 #' @name pdf_worksheet

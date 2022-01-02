@@ -14,9 +14,9 @@ pdf_assignment(...)
 
 \item{fig_height}{Default height (in inches) for figures}
 
-\item{..., fig_crop, dev, df_print, highlight, keep_tex, keep_md, latex_engine, citation_package, includes, md_extensions, output_extensions, pandoc_args, extra_dependencies}{Other arguments to be passed to \code{\link[rmarkdown:pdf_document]{rmarkdown::pdf_document()}}
-(note you cannot use the \code{template} argument in either
-\code{pdf_worksheet} or \code{pdf_assignment}; this argument is set
+\item{...}{See other arguments in the documentation for \code{\link[rmarkdown:pdf_document]{rmarkdown::pdf_document()}}
+(note that you cannot use the \code{template} argument in either
+\code{pdf_worksheet} or \code{pdf_assignment} becaues it is set
 internally).}
 }
 \value{
