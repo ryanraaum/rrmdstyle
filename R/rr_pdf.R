@@ -1,6 +1,7 @@
-fig_aspect <- 0.618
-fig_w <- 6
-fig_h <- fig_w * fig_aspect
+
+# fig_aspect <- 0.618
+# fig_w <- 6
+# fig_h <- fig_w * fig_aspect
 
 #' PDF formats for literate, interactive R Markdown documents
 #'
@@ -8,10 +9,11 @@ fig_h <- fig_w * fig_aspect
 #' my Quantitative Methods in Biological Anthropology course.
 #'
 #' @inheritParams rmarkdown::pdf_document
-#' @param ... Other arguments to be passed to \code{\link{pdf_document}}
+#' @param ...,fig_crop,dev,df_print,highlight,keep_tex,keep_md,latex_engine,citation_package,includes,md_extensions,output_extensions,pandoc_args,extra_dependencies
+#' Other arguments to be passed to [rmarkdown::pdf_document()]
 #' (note you cannot use the \code{template} argument in either
 #' \code{pdf_worksheet} or \code{pdf_assignment}; this argument is set
-#' internally)
+#' internally).
 #' @section Details: You can find more details about each output format below.
 #' @name pdf_worksheet
 #' @rdname rr_pdf
@@ -23,8 +25,8 @@ NULL
 #' @export
 #' @rdname rr_pdf
 pdf_worksheet <- function(
-  fig_width = fig_w,
-  fig_height = fig_h,
+  fig_width = 6,
+  fig_height = 3.7,
   ...
 ) {
   rr_pdf("worksheet",
@@ -35,7 +37,6 @@ pdf_worksheet <- function(
 
 #' @section `pdf_assignment`: Format for creating a minimally styled
 #' assignment document.
-#' @return An R Markdown output format.
 #' @export
 #' @rdname rr_pdf
 pdf_assignment <- function(...) {
