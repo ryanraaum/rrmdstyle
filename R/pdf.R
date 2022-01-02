@@ -34,7 +34,7 @@ rr_pdf <- function(
   if (identical(highlight, "default")) highlight <- "pygments"
 
   if (identical(template, "default")) {
-    template <- template_resources("pdf", "worksheet.tex")
+    template <- template_resources("pdf", "pdf_template.tex")
   } else {
     stop("User template not supported.")
   }
