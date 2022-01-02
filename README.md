@@ -32,4 +32,4 @@ output: rrmdstyle::pdf_worksheet
 ---
 ```
 
-Almost all of the arguments for either `rmarkdown::pdf_document()` or `rmarkdown::html_document()` can be used, but I don't expect my students to use them. (One main reason for this package was so I could have simple, clean YAML headers in my worksheet and assignment documents.)
+Almost all of the arguments for either `rmarkdown::pdf_document()` or `rmarkdown::html_document()` can be used as appropriate, but I don't expect my students to use them. (One main reason for this package was so I could have simple, clean YAML headers in my worksheet and assignment documents.)
