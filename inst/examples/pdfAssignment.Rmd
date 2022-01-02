@@ -1,0 +1,153 @@
+---
+title: "Assignment"
+subtitle: "Course Name"
+author: "YOUR NAME HERE"
+output: pdf_assignment
+---
+
+### Preliminaries
+
+```{r, message=FALSE, warning=FALSE}
+library(MASS)
+library(ggplot2)
+library(dplyr, warn.conflicts=FALSE)
+library(bbmle)
+library(interactions)
+```
+
+### (1) Log Transformation
+
+a) The `mammals` dataset in the `MASS` package tabulates `body` mass in kg and `brain` mass in g for 62 species of mammals. Plot `brain` (y-axis) against `body` (x-axis).
+
+```{r}
+ggplot(mammals, aes(body, brain)) +
+  geom_point()
+```
+
+b) How does that look?
+
+> 
+
+c) Add new logged body and brain mass variables to the `mammals` data frame.
+
+```{r}
+#
+```
+
+d) Plot logged brain mass (y-axis) against logged body mass (x-axis)
+
+```{r}
+#
+```
+
+e) How does that look?
+
+> 
+
+f) Create a linear model to predict brain mass from body mass and generate the summary for that model.
+
+```{r}
+#
+```
+
+f) Fill in the blank:
+
+> For a 1% change in body mass, the model predicts a _____ change in brain mass.
+
+### (2) Chi-square Goodness of Fit
+
+a) In a standard deck of cards, there are 52 cards: 12 face cards (jacks, queens, kings) and 40 number cards (counting the ace in with the number cards). You are dealt a hand of 10 cards containing no face cards. How would you run a Chi-square goodness of fit to answer the question "Is this consistent with the deck being a standard deck?"
+
+```{r}
+#
+```
+
+b) Is this consistent with the deck being a standard deck?
+
+> 
+
+### (3) Chi-square Test of Independence / Test of Homogeneity
+
+a) The `survey` dataset in the `MASS` package contains the responses of 237 Statistics students at the University of Adelaide to a number of questions. Here, you will focus on `Sex`, `W.Hnd` (writing hand, `Left` or `Right`), and `Exer` (how often the student exercises: `Freq`, `Some`, `None`). How would you run a Chi-square test to evaluate if males and females are different in their handedness?
+
+```{r}
+#
+```
+
+b) Do the male and female students differ in handedness according to this test?
+
+> 
+
+c) How would you run a Chi-square test to evaluate if males and females are different in exercise frequency?
+
+```{r}
+#
+```
+
+d) Do the male and female students differ in exercise frequency according to this test?
+
+> 
+
+e) Leaving the survey data behind, you have painstakingly documented the use of the Oxford comma in 100 primatology and paleoanthropology articles with the following results:
+
+| Article Type      |  Oxford   | No Oxford |
+|:------------------|:---------:|:---------:|
+| Primatology       |    21     |     29    |
+| Paleoanthropology |    33     |     17    |
+
+How would you run a Chi-square test to evaluate if primatology and paleoanthropology differ in their use of the Oxford comma?
+
+```{r}
+#
+```
+
+f) Do primatology and paleoanthropology differ in their use of the Oxford comma?
+
+> 
+
+### (4) Poisson Regression
+
+Here you will use the built-in `warpbreaks` dataset that tabulate the number of `breaks` in a given length of wool for two different `wool` types (`A` and `B`) and three different loom `tension` settings (`L`, `M`, `H`).
+
+a) Generate a boxplot for these data with `tension` on the x-axis, `breaks` on the y-axis, and with the `wool` types colored differently (either `fill=wool` or `color=wool` in the `aes`thetic).
+
+```{r}
+#
+```
+
+b) Plot a histogram of the `breaks` - use `binwidth=10`.
+
+```{r}
+#
+```
+
+Definitely pretty skewed.
+
+c) Create three models to model the number of breaks using a Poisson generalized linear model.
+1. with `wool` only as the predictor
+2. with `wool` and `tension`
+3. with `wool`, `tension`, and their interaction
+
+```{r}
+#
+```
+
+d) Using either analysis of deviance (through the `anova` function) or AIC/BIC, compare these models.
+
+```{r}
+#
+```
+
+e) Which is the best fit?
+
+> 
+
+f) Using the `cat_plot` function from the `interactions` package, plot your selected model. The call syntax you want is `cat_plot(model_variable_name, pred=x-axis-variable, modx=split-by-color-variable)` - if that doesn’t help, look at slides 74-76 from the Multiple Linear Regression lecture. Add `geom=”line”` if you like.
+
+```{r}
+#
+```
+
+g) Compare this model plot to the plot of the observed data that you did in question 4-a. Does the model seem to be capturing the important features of the observed data?
+
+> 

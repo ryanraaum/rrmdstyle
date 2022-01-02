@@ -446,9 +446,11 @@ $endif$
 \setlength{\droptitle}{-3cm}
 
 % fancy headers on second and later pages
+$if(rrworksheet)$
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \setlength{\headheight}{14pt}
+$endif$
 
 % include logo at the top of first page
 $if(rrlogo)$

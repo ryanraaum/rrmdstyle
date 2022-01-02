@@ -2,7 +2,7 @@
 title: "Worksheet"
 subtitle: "Course Name"
 author: "Ryan Raaum"
-output: rrmdstyle::pdf_worksheet
+output: pdf_worksheet
 ---
 
 # Heading 1
