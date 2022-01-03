@@ -443,14 +443,8 @@ $endif$
 
 % style the title elements
 \usepackage{titling}
-\setlength{\droptitle}{-3cm}
-
-% fancy headers on second and later pages
-$if(rrworksheet)$
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\setlength{\headheight}{14pt}
-$endif$
+\setlength{\droptitle}{-60pt}
+\posttitle{\par\end{center}}
 
 % include logo at the top of first page
 $if(rrlogo)$
@@ -463,6 +457,13 @@ $if(rrlogo)$
   \par
   \hrule
 }
+$endif$
+
+% fancy headers on second and later pages
+$if(rrworksheet)$
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{14pt}
 $endif$
 
 % style the headings
