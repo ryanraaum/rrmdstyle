@@ -3,5 +3,5 @@
 .Rdata
 .httr-oauth
 .DS_Store
-inst/examples/*.html
-inst/examples/*.pdf
+examples/*.html
+examples/*.pdf
