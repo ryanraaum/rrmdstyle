@@ -33,3 +33,12 @@ output: rrmdstyle::pdf_worksheet
 ```
 
 Almost all of the arguments for either `rmarkdown::pdf_document()` or `rmarkdown::html_document()` can be used as appropriate, but I don't expect my students to use them. (One main reason for this package was so I could have simple, clean YAML headers in my worksheet and assignment documents.)
+
+## Credit to
+
+- [rstudio/tufte](https://github.com/rstudio/tufte) for inspiration on how to wrap the `rmarkdown::pdf_document`/`rmarkdown::html_document` functions and file layout.
+- [rstudio/rticles](https://github.com/rstudio/rticles) for general inspiration.
+- [rstudio/bslib](https://github.com/rstudio/bslib) for the excellent `bs_theme` allowing for easy customization of [Bootstrap](https://getbootstrap.com) themes in R.
+- [Modifying R Markdown's LaTeX styles](https://www.gerkelab.com/blog/2019/04/manipulating-latex-in-rmd/) by Travis Gerke for convincing me that it shouldn't be too hard.
+- [Wandmalfarbe/pandoc-latex-template](https://github.com/Wandmalfarbe/pandoc-latex-template) for an example of a good way to modify the stock pandoc template. 
+
