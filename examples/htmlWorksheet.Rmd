@@ -1,6 +1,6 @@
 ---
 title: "Worksheet"
-subtitle: "Course Name"
+course: "Course Name"
 author: "Ryan Raaum"
 output: rrmdstyle::html_worksheet
 ---

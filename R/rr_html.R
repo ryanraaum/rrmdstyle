@@ -19,7 +19,8 @@ NULL
 #' @return An R Markdown output format.
 #' @export
 #' @rdname rr_html
-html_worksheet <- function(...) {
+html_worksheet <- function(template = "default", ...) {
+
   wrapped_html_document <- function(..., theme = theme, extra_dependencies = list()) {
     rmarkdown::html_document(
       ...,
@@ -43,7 +44,17 @@ html_worksheet <- function(...) {
       highlight = "pygments"
     )
   }
-  format <- wrapped_html_document(theme = NULL, ...)
+  format <- wrapped_html_document(theme = NULL, template = template, ...)
+
+  if (identical(template, "default")) {
+    template <- template_resources("html", "html_template.html")
+  } else {
+    stop("User template not supported.")
+  }
+
+  # https://github.com/rstudio/rmarkdown/issues/727#issuecomment-226135821
+  template_arg <- which(format$pandoc$args == "--template") + 1L
+  format$pandoc$args[template_arg] <- template
 
   format$knitr$opts_chunk$class.output = "bg-success text-dark bg-opacity-10"
   format$knitr$opts_chunk$class.message = "bg-info text-dark bg-opacity-10"

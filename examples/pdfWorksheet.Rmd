@@ -1,8 +1,8 @@
 ---
 title: "Worksheet"
-subtitle: "Course Name"
+course: "Course Name"
 author: "Ryan Raaum"
-output: pdf_worksheet
+output: rrmdstyle::pdf_worksheet
 ---
 
 # Heading 1
@@ -12,7 +12,6 @@ output: pdf_worksheet
 ### Heading 3
 
 ```{r setup, message=FALSE, warning=FALSE}
-library(dplyr)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -53,7 +52,6 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 
 ```{r}
 library(ggplot2)
-library(GGally)
 ```
 
 ```{r}

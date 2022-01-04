@@ -447,6 +447,20 @@ $endif$
 \posttitle{\par\end{center}}
 \preauthor{\begin{center} \large \begin{tabular}[t]{c}}
 
+$if(course)$
+$if(beamer)$
+$else$
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\course}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1}}{}{}
+}
+\makeatother
+$endif$
+\course{$course$}
+$endif$
+
+
 % include logo at the top of first page
 $if(rrlogo)$
 \usepackage{graphicx}

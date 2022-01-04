@@ -1,8 +1,8 @@
 ---
 title: "Assignment"
-subtitle: "Course Name"
+course: "Course Name"
 author: "YOUR NAME HERE"
-output: pdf_assignment
+output: rrmdstyle::pdf_assignment
 ---
 
 ### Preliminaries
