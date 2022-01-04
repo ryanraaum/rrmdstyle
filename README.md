@@ -26,7 +26,7 @@ To use any of these, assign to `output` in the R Markdown YAML header. For examp
 ```yaml
 ---
 title: "Worksheet"
-subtitle: "Course Name"
+course: "Course Name"
 author: "Ryan Raaum"
 output: rrmdstyle::pdf_worksheet
 ---
