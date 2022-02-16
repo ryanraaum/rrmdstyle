@@ -61,7 +61,7 @@ ggplot(mydata, aes(x,y)) +
   xlim(0,5)
 ```
 
-```{r error=TRUE}
+```{r}
 x = 
 ```
 

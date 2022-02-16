@@ -7,6 +7,7 @@ fig_h = fig_w * fig_aspect
 #' This format is for an HTML version of worksheets used in
 #' my Quantitative Methods in Biological Anthropology course.
 #'
+#' @param template User templates are not supported
 #' @param ...
 #' See other arguments in the documentation for [rmarkdown::html_document()]
 #' (note that you cannot use the \code{theme} argument because it is set

@@ -4,9 +4,11 @@
 \alias{html_worksheet}
 \title{HTML format for literate, interactive R Markdown worksheets}
 \usage{
-html_worksheet(...)
+html_worksheet(template = "default", ...)
 }
 \arguments{
+\item{template}{User templates are not supported}
+
 \item{...}{See other arguments in the documentation for \code{\link[rmarkdown:html_document]{rmarkdown::html_document()}}
 (note that you cannot use the \code{theme} argument because it is set
 internally).}

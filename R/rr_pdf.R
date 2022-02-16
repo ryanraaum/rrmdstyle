@@ -96,6 +96,7 @@ rr_pdf <- function(
   format$knitr$opts_chunk$class.message <- "bg-info"
   format$knitr$opts_chunk$class.warning <- "bg-warning"
   format$knitr$opts_chunk$class.error <- "bg-danger"
+  format$knitr$opts_chunk$error = TRUE
 
   format
 }
